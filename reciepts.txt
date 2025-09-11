@@ -1,0 +1,4 @@
+
+==============================
+   MOVIE TICKET RECEIPT
+==============================customer Name:mennaMovie: Spongebob seats booked:  2Price for 1 seat:  RM 20total amount :RM 40Amount paid :RM 45.0Balance :RM 5.0==============================    thanks you & enjoy your movie!==============================
