@@ -48,36 +48,54 @@ def customerdetials():
         print("Wednesday (8/10)")
         day = input(">>")
 def ticketing():
-
+#find way to make text file for movie and apply
+#make customer choose the movie and then pay
+#make 2 version of movie description. 1 for show screen which will be short and in rectantage 
+#
 
     movie={
-      "Zootopia 2":{"time": "10 am","seats":50 , "price": 10},
-      "Wicked: For Good":{"time":"2:30 pm","seats":50 ,"price":15},
-      "Spongebob": {"time":"6:30 pm","seats":50 ,"price":20} 
+      "Zootopia 2":{"time": "10 am",
+                    "seats":50 ,
+                    "price": 10 ,
+                   "story":"\nDetectives Judy Hopps and Nick Wilde find themselves on the twisting trail of a mysterious reptile who turns the mammal metropolis of Zootopia upside down. Testing their growing partnership like never before, they go under cover in new parts of town to crack the case."
+                   "\n"},
+      "Wicked: For Good":{"time":"2:30 pm",
+                          "seats":50 ,
+                          "price":15, 
+                          "story":"\nhis article is about the musical. For the Broadway cast recording, see Wicked (musical album). For the two-part film adaptation, see Wicked (film franchise). For the novel that inspired the musical, see Wicked (Maguire novel)."
+                          "\n"},
+      "Spongebob": {"time":"6:30 pm",
+                    "seats":50 ,
+                    "price":20, 
+                    "story":"\nThe series follows SpongeBob SquarePants, an energetic and optimistic sea sponge who lives in a submerged pineapple, and his aquatic friends. SpongeBob has a childlike enthusiasm for life, which carries over to his job as a fry cook at a fast food restaurant"
+                    "\n"} 
     }
 
     def showing_Movie ():
-      print ("\n===Available Movies ===== ")
+      print ("=========Available Movies========\n")
       for name,info in movie.items():
-        print(f"{name} ---> Time: {info['time']}, Seats: {info['seats']}, Price: RM{info['price']}")
+        print(f"{name} ---> Time: {info['time']}, Seats: {info['seats']}, Price: RM{info['price']}, Story:{info['story']}")
 
     def print_receipt(customer_name,movie_name,seats, price,total,paid,balance):
-      print("\n" + "="*30) #decorlartion
-      print("   MOVIE TICKET RECEIPT")
-      print("="*30)
-      print(f"customer Name:{customer_name}")
-      print(f"Movie: {movie_name} ")
-      print(f"seats booked:  {seats}")
-      print(f"Price for 1 seat:  RM {price}")
-      print(f"total amount :RM {total}")
-      print(f"Amount paid :RM {paid}")
-      print(f"Balance :RM {balance}" )
-      print("="*30)
-      print("    thanks you & enjoy your movie!")
-      print("="*30 +"\n")
+      reciept_text= (
+        "\n" + "="*30 +"\n" + #decorlartion
+        "   MOVIE TICKET RECEIPT\n"+
+        "="*30+ "\n"+
+        f"customer Name:{customer_name}\n"+
+        f"Movie: {movie_name} \n"+
+        f"seats booked:  {seats}\n"+
+        f"Price for 1 seat:  RM {price}\n"+
+        f"total amount :RM {total}\n"+
+        f"Amount paid :RM {paid}\n"+
+        f"Balance :RM {balance}\n"+
+        "="*30 +"\n"+
+        "    thanks you & enjoy your movie!\n"+
+        "="*30 +"\n\n"
+      )
+      print(reciept_text) #make variable called revieot text to add it to
 
-
-
+      with open ("reciepts.txt", "a") as file:
+         file.write(reciept_text)
 
 
     def book_ticket():
@@ -116,7 +134,6 @@ def ticketing():
         break
       else:
         print("invalid choice, try again.")
-
 
 
 def main_menu():
