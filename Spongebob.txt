@@ -1,0 +1,5 @@
+name: Spongebob
+Time: 6:30 pm
+Seats: 50 
+Price: 20RM
+Story: The series follows SpongeBob SquarePants, an energetic and optimistic sea sponge who lives in a submerged pineapple, and his aquatic friends.SpongeBob has a childlike enthusiasm for life, which carries over to his job as a fry cook at a fast food restaurant
