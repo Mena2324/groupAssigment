@@ -1,0 +1,7 @@
+Please fill in your personal account details below:
+name = ("Enter your full name:")
+birthday = int(input("Enter the year you were born:"))
+email = input("Enter your email:")
+Insert your occupation: \n -Student \n -Working
+occupation = input(">>")
+    

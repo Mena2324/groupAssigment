@@ -1,0 +1,4 @@
+When would you like to watch the movie? (Enter the day of the week)
+Saturdary (4/10)
+Monday (6/10)
+Wednesday (8/10)
